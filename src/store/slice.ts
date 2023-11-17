@@ -20,14 +20,14 @@ const todoSlice = createSlice({
         title: action.payload.title,
         description: action.payload.description,
         deadline: action.payload.deadline,
-        status: 'pending'
+        completed: false
       }
       state.todos.push(newTodo);
       console.log(state.todos)
     },
     toggleComplete: (state, action) => {
       const index = state.todos.findIndex((todo: TodoItemType) => todo.id === action.payload.id);
-      state.todos[index].status = action.payload.status;
+      state.todos[index].completed = !action.payload.completed;
     },
     deleteTodo: (state, action) => {
       const todosData = [...state.todos];

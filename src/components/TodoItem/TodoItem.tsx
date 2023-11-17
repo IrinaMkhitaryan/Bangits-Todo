@@ -16,7 +16,7 @@ const TodoItem = (props: PropTypes) => {
 
   const handleCompleteClick = () => {
     dispatch(
-      toggleComplete({ id: item.id, status: 'completed' })
+      toggleComplete({ id: item.id, completed: item.completed })
     )
   };
   const handleDeleteClick = () => {
@@ -36,7 +36,7 @@ const TodoItem = (props: PropTypes) => {
     <ListItemIcon>
       <Checkbox
         edge="start"
-        checked={item.status === 'completed'}
+        checked={item.completed}
         tabIndex={-1}
         disableRipple
         disabled={new Date(item.deadline) < new Date()}

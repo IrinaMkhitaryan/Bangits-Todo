@@ -5,5 +5,5 @@ export type TodoItemType = {
   title: string,
   description?: string,
   deadline: '',
-  status?: string
+  completed?: boolean
 };

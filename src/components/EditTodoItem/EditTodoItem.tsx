@@ -16,7 +16,7 @@ const EditTodoItem = (props: PropTypes) => {
       title: item?.title,
       description: item?.description,
       deadline: item?.deadline,
-      status: item?.status,
+      completed: item?.completed,
     },
     resolver: yupResolver(schema())
   });
