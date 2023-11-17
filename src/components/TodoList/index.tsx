@@ -13,7 +13,7 @@ const TodoList = () => {
   const [openRemovedTaskDialog, setOpenRemovedTaskDialog] = useState(false);
   const [changingItem, setChangingItem] = useState<TodoItemType | null>(null);
   const todos = useSelector((state: RootState) => state.todos.todos);
- 
+
 
   return (
     <Box mx={4} my={3} display='flex' justifyContent='center' alignItems='center' flexDirection='column'>
